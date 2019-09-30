@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="average" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="grade" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="registeredSubjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subject" inverseName="registeredStudents" inverseEntity="Subject"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="registeredStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="registeredSubjects" inverseEntity="Student"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-117.84765625" positionY="-20.60546875" width="128" height="118"/>
+        <element name="Subject" positionX="147.0703125" positionY="-3.55078125" width="128" height="73"/>
+    </elements>
+</model>
